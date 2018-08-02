@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="攻城狮大本营">
+    <!-- 要求使用webkit内核 -->
+    <meta name="renderer" content="webkit">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="iDurian Media Team">
+    <!-- 忽略数字自动识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 忽略识别邮箱 -->
+    <meta name="format-detection" content="email=no">
+    <!--  App 广告条 Smart App Banner -->
+    <!-- <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+
+    <!-- 禁止浏览器从本地计算机的缓存中访问页面内容:这样设定,访问者将无法脱机浏览,开发使用 -->
+    <!-- <meta http-equiv="pragma" content="no-cache"> -->
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> -->
+    <!-- <meta http-equiv="expires" content="-1"> -->
+
+    <!-- 允许缓存,生产使用.使用长缓存确保服务器负担,使用文件名更新态刷缓存 -->
+    <meta http-equiv="Cache-Control" content="public">
+    <meta http-equiv="Cache-Control" content="max-age=864000">
+    <title>攻城狮大本营</title>
+</head>
+
+<body>
+    <div id="app-mount">
+    </div>
+    <script type="text/javascript" src="/lyj/css.js" async></script>
+    <!-- <script src="https://unpkg.com/three"></script> -->
+    <script type="text/javascript" src="/js/three.js"></script>
+    <script type="text/javascript" src="/js/stats.min.js"></script>
+    <script type="text/javascript" src="/control/OrbitControls.js"></script>
+    <script type="text/javascript" src="/control/SceneUtils.js"></script>
+    <script type="text/javascript" src="/js/tween.min.js"></script>
+
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+            <link type="text/css" rel="styleSheet"  href="/css/TabBar.css" />
+    <![endif]-->
+
+    <script type="text/javascript">
+        if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
+            document.write("<script src='https://as.alipayobjects.com/g/component/??es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js'/>")
+        }
+    </script>
+
+    <!-- 这行代码必须要,document.write会将这行代码写进去 -->
+    <script type="text/javascript" src="" async></script>
+    <script type="text/javascript" src="/lyj/app.js" async></script>
+
+    <script>
+        // 性能监控
+        var stats = new Stats();
+        stats.setMode(1); // 0: fps, 1: ms
+        // 将stats的界面对应左上角
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        setInterval(function () {
+            stats.begin();
+            // 你的每一帧的代码
+            stats.end();
+        }, 1000 / 60);
+    </script>
+
+</body>
+
+</html>
