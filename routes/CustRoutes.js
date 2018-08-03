@@ -18,8 +18,8 @@ import threeJsSpotLight from '../examples/zother/spotLight'
 import threeJsSpotLight_Example from '../examples/zother/spotLight_example'
 import threeJsDirectionalLight from '../examples/zother/directionalLight'
 import threeJsHemisphereLight from '../examples/zother/hemisphereLight'
-
 import threeJsClickGeometry from '../examples/zother/clickGeometry'
+import threeJsLensFlare from '../examples/zother/lensFlare'
 
 class CustRoutes extends Component {
     constructor(props) {
@@ -50,6 +50,7 @@ class CustRoutes extends Component {
                     <Route path="/threeJsHemisphereLight" component={threeJsHemisphereLight} routeComponent={this} />
 
                     <Route path="/threeJsClickGeometry" component={threeJsClickGeometry} routeComponent={this} />
+                    <Route path="/threeJsLensFlare" component={threeJsLensFlare} routeComponent={this} />
                     <Route path="/" component={Index} routeComponent={this} />
                 </Switch>
             </div>

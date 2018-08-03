@@ -42,8 +42,6 @@ class Index extends React.Component {
                 this.scene.add(cloneMesh);
             }
         }
-
-        this.gui = null
     }
 
     componentDidMount() {

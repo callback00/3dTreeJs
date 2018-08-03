@@ -36,7 +36,7 @@ class Index extends React.Component {
         // A end
         // B begin
         // 纹理坐标怎么弄
-        var texture = new THREE.TextureLoader().load("http://localhost:8002/image/first.jpg");
+        var texture = new THREE.TextureLoader().load("/image/first.jpg");
         var material = new THREE.MeshBasicMaterial({ map: texture });
         var mesh = new THREE.Mesh(geometry, material);
         this.scene.add(mesh);

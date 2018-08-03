@@ -107,6 +107,12 @@ class Index extends Component {
                     title="第十六节 (获取点击物体)"
                     describe="学习如何获取点击的几何体对象"
                 />
+
+                <ContextIndex
+                    url="/threeJsLensFlare"
+                    title="第十七节 (光晕)"
+                    describe="给PointLight添加光晕"
+                />
             </div>
         )
     }

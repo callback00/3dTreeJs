@@ -33,9 +33,7 @@ class Index extends React.Component {
             far: 200,
 
             debug: false,
-        }
-
-        this.gui = null
+        };
     }
 
     componentDidMount() {
@@ -84,6 +82,8 @@ class Index extends React.Component {
 
         // 创建一个场景
         this.scene = new THREE.Scene();
+        // 实现雾化效果
+        this.scene.fog = new THREE.FogExp2(0xffffff, 0.005);
 
         // 创建一个具有透视效果的摄像头
         this.camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 1000);
@@ -189,6 +189,33 @@ class Index extends React.Component {
         cube.position.z = 0;
         cube.name = 'example-cube';
         this.scene.add(cube);
+
+
+        const loader = new THREE.FontLoader();
+
+        const scene = this.scene;
+        // 引入的字体不能显示中文，如果需要中文需换字体
+        loader.load('fonts/helvetiker_regular.typeface.json', function (res) {
+
+            const font = new THREE.TextBufferGeometry('Hello three.js!', {
+                font: res,
+                size: 10,
+                height: 5,
+                // curveSegments: 12,
+                // bevelEnabled: true,
+                // bevelThickness: 0.2,
+                // bevelSize: 1,
+                // bevelSegments: 5
+            });
+
+            font.center();
+
+            const material = new THREE.MeshLambertMaterial({ color: 'red', side: THREE.DoubleSide });
+
+            const fontModel = new THREE.Mesh(font, material);
+            fontModel.position.y = 20
+            scene.add(fontModel);
+        });
 
     }
 

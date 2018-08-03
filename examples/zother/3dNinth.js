@@ -32,8 +32,6 @@ class Index extends React.Component {
             }.bind(this)
 
         }
-
-        this.gui = null
     }
 
     componentDidMount() {

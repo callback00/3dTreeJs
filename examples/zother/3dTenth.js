@@ -22,7 +22,6 @@ class Index extends React.Component {
       lightColor: '#CCFFFF'
     }
 
-    this.gui = null
   }
 
   componentDidMount() {

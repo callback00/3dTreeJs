@@ -27,8 +27,6 @@ class Index extends React.Component {
             distance: 0, // 光照距离
             target: 'Plane',
         }
-
-        this.gui = null
     }
 
     componentDidMount() {

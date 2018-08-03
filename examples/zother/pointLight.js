@@ -27,8 +27,6 @@ class Index extends React.Component {
             distance: 100, // 光照距离
             decay: 2, // 衰减度
         }
-
-        this.gui = null
     }
 
     componentDidMount() {
